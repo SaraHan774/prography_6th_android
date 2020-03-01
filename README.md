@@ -1,11 +1,13 @@
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
-<!DOCTYPE html>
-<html>
-<head>
-<title>prography_6th_android</title>
-<meta charset="utf-8"/>
-</head>
-<body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-03-01T15:41:37.811Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36\&quot; etag=\&quot;LGiaUz7FBaGBSSzwepHZ\&quot; version=\&quot;12.7.9\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;ybusUxiaKn7LduK0XXoV\&quot; name=\&quot;Page-1\&quot;&gt;5Vldd6M2EP01PCaHb8MjEKebnrTds2633aceGRSsrkBeIcd2f31HIBljkcQ9Teys+5JIF33OvTMayZaXVZsfOFoufmIFppZrFxvLu7Fc17G9CP5JZNshoaOAkpNCNeqBGfkb654KXZECN4OGgjEqyHII5qyucS4GGOKcrYfNHhgdzrpEJTaAWY6oif5OCrHo0Ciwe/wDJuVCz+zY6kuFdGMFNAtUsPUe5E0tL+OMia5UbTJMpfG0Xbp+t0983S2M41oc0yFbZd++3KVXE/rr1Yf6/vOWXt1dTbpRHhFdqQ2rxYqttgAuwCCqyrhYsJLViE57NOVsVRdYTmNDrW9zz9gSQAfAv7AQW8UuWgkG0EJUVH3t5pQTPbk3BTVsxXP8zIa0RhAvsXimXbhjAKSLWYUF30I/jikS5HG4DqQ0VO7a9WaGgrL0v7C6MzmHlfGGiD9k9+tA1b6owWT5ZrNf2arKGZhxgrNSYzjEZ4LXKq4dcNYzIs27XhCBZ0vUGmEN0XBM44+YC7x53pbm1lUHL1ShRMVSN1b1dR+ZHB1uFntRSfd7dWsFlxY+3GNFek6NuobVP+Ela4hgavD3JFLfPrdI/UsTqXekSN1zitQbEang7IGIdyfRwDm3REPDWL/dmSKlFLJefBYTOeGRJoreykSaoxFBzTB/JDm+/grSCiksJJ1zKJWitcUh0svQTj7eWdPMSmwrDmQhvrFiuJ7AAm1rmlipLRHAU9dK/RbMrMhTYORbqWOQBCYXQzYamO4rzhhlHJCa1ZLBB0LpAYQoKWuo5kARBjyVBBK4iSTqQ0WKgj5F/zA+vYIC/OgIJ4lO6SSOmZv1596R5FvTVBKX+Nb0xoqA4qjlHcCsRRwryRTRKYgha2XgWelOEr4Fe4ZBQDNJJAuQg8Xya7pqSI2bBor3rCS5llEmJRV108RyPjW6K3E5UKinhLG8/5WkRlOD00rKPKUyRGmzy/lHZZUtkHipCasFyl9qZSJ8L5HrxDORClPlaSukVAo39pVmjlKzIdyubxLLcbpYJrXeKjDuurShsBswDVtQ4veQN9wggYzVJW2QtHt/kcMH2nHaGBvpTQAuhw+UB/S76fp6l+wB7sADRm9wp/UAMzu+5aisYEMylIEuUSVN0f2VZ2YOuSMRBDcXTFN8kP2M0TQZocl9M5pigyYzP/yuLjGOejt45y91R7xwaK3eozmmH2X4Jkxqds6EYNWImAU7SNibBVrKwapNKV/Rr+eoIfk1RVvMcfEnb9+10/ZN3WmJWwkKuUa2e/J+JdnvHt217L0R2dsnjU7mxeiW0Go8P++Or8S/3Ljk6odjTZAfGASNnR5vF5aiEffocppmieoBDeG3lfypo7PUVdOZKoEmNWvttWugc6EfZ7/8/FJuoU6net4s9/Ip2Es3vZlm/ZcFvd7W2gxSn7M6lwr0NaG7hX6nW/uE821OMZeZr5ElpjLTUylnovJWqEaZykx3BpDX7Sc2fKnO7YTBwLknI8E3PmXw1VHjIPg2SYGWYLD2RnOxZBwehYHJRhy+SqSFav8jcPtt76d0b/oP&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
-</body>
-</html>
+### 프로그라피 사전 과제 (Android)
+
+* MVVM 아키텍처를 기반으로 설계하였습니다. 
+* Retrofit, Gson 을 이용해 JSON 객체를 읽어와 `Film` data class 객체로 변환하였습니다. 
+* 받아온 정보는 Repository 에서 네트워크 과련된 비즈니스 로직을 처리하도록 했습니다. 
+* ViewModel 에서는 정보를 LiveData 로서 관리합니다. Configuration change 가 일어나도 새롭게 정보를 
+네트워크에서 읽어오지 않기 위해 ViewModel 과 LiveData 를 사용했습니다.
+* UI 는 RecyclerView 에서 ListAdapter 와 DiffUtil 을 사용해 리스트를 효율적으로 업데이트 하고자 했습니다. (비록 static 한 API 정보 인 것 같았지만)
+* RecyclerView 의 아이템을 클릭하면 DetailActivity 로 넘어가서 세부 정보를 표시하도록 했습니다.
+
+### 설계 다이어그램
+
+<iframe frameborder="0" style="width:100%;height:573px;" src="https://www.draw.io?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#G16Scd2YKn4MVYVFwDwU0Fag6YosI43vUR"></iframe>    
