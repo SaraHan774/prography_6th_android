@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.gahee.myprography.FilmsAdapter.Companion.FILM_DATA_KEY
 import kotlinx.android.synthetic.main.activity_detail.*
 
+@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class DetailActivity : AppCompatActivity() {
 
         //set up rating bar
         tv_detail_film_rate.text = getString(R.string.film_score, film.rate)
-        detail_rating_bar.rating = film.rate.toFloat()/10
+        detail_rating_bar.rating = film.rate.toFloat()/20
 
     }
 

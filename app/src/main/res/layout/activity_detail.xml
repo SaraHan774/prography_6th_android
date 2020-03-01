@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".DetailActivity">
 
@@ -38,12 +42,19 @@
         <RatingBar
             android:id="@+id/detail_rating_bar"
             android:layout_below="@id/tv_detail_film_rate"
-            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:stepSize="0.5"
-            android:numStars="10"
+            android:max="5"
+            android:numStars="5"
             android:isIndicator="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            />
 
 
     </RelativeLayout>
@@ -97,5 +108,5 @@
         tools:text="@string/sample_text_medium"/>
 
 
-
 </LinearLayout>
+</ScrollView>
