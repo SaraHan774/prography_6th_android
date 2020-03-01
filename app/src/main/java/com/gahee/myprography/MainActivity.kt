@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setUpViewPager(){
-        main_view_pager_container.adapter = MyPagerAdapter(supportFragmentManager, NUM_OF_PAGES)
+        main_view_pager_container.adapter = MainPagerAdapter(supportFragmentManager, NUM_OF_PAGES)
         main_view_pager_container.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
             }

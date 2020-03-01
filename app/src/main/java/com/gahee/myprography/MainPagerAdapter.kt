@@ -7,7 +7,7 @@ import com.gahee.myprography.fragments.CallsFragment
 import com.gahee.myprography.fragments.ChatsFragment
 import com.gahee.myprography.fragments.ContactsFragment
 
-class MyPagerAdapter(
+class MainPagerAdapter(
     fragmentManager: FragmentManager,
     private val numOfPages: Int
 ) : FragmentStatePagerAdapter(
