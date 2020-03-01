@@ -10,4 +10,4 @@
 
 ### 설계 다이어그램
 
-<iframe frameborder="0" style="width:100%;height:573px;" src="https://www.draw.io?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#G16Scd2YKn4MVYVFwDwU0Fag6YosI43vUR"></iframe>    
+[다이어그램 링크](https://drive.google.com/file/d/16Scd2YKn4MVYVFwDwU0Fag6YosI43vUR/view?usp=sharing)    
