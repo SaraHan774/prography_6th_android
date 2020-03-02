@@ -1,7 +1,0 @@
-package com.gahee.myprography
-
-import androidx.lifecycle.ViewModel
-
-class CallsViewModel : ViewModel() {
-
-}

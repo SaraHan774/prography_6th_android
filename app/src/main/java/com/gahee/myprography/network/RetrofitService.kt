@@ -1,5 +1,6 @@
-package com.gahee.myprography
+package com.gahee.myprography.network
 
+import com.gahee.myprography.Film
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

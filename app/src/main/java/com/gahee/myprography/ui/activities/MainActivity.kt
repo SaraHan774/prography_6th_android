@@ -1,4 +1,4 @@
-package com.gahee.myprography
+package com.gahee.myprography.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,10 @@ import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.viewpager.widget.ViewPager
+import com.gahee.myprography.BottomNavState
+import com.gahee.myprography.BottomNavViewModel
+import com.gahee.myprography.MainPagerAdapter
+import com.gahee.myprography.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         //setBottomNavState 에 의하여 바뀐 상태가 Observe 되고 순서에 맞게 버튼의 checked 상태를 바꾼다.
         bottomNavViewModel.bottomNavState.observe(this, Observer {
-            bottom_nav_view.isSelected = true
+            //bottom_nav_view.isSelected = true
             bottom_nav_view.menu.getItem(it.ordinal).isChecked = true
         })
 
@@ -37,7 +41,11 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setUpViewPager(){
-        main_view_pager_container.adapter = MainPagerAdapter(supportFragmentManager, NUM_OF_PAGES)
+        main_view_pager_container.adapter =
+            MainPagerAdapter(
+                supportFragmentManager,
+                NUM_OF_PAGES
+            )
         main_view_pager_container.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
             }
@@ -66,9 +74,12 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "bottomNav Menu Position : ${it.title}")
 
             when(it.itemId){
-                R.id.navigation_call -> setViewPagerPosition(BottomNavState.CALL.ordinal)
-                R.id.navigation_chat -> setViewPagerPosition(BottomNavState.CHATS.ordinal)
-                R.id.navigation_contacts -> setViewPagerPosition(BottomNavState.CONTACTS.ordinal)
+                R.id.navigation_call -> setViewPagerPosition(
+                    BottomNavState.CALL.ordinal)
+                R.id.navigation_chat -> setViewPagerPosition(
+                    BottomNavState.CHATS.ordinal)
+                R.id.navigation_contacts -> setViewPagerPosition(
+                    BottomNavState.CONTACTS.ordinal)
                 else -> false
             }
         }

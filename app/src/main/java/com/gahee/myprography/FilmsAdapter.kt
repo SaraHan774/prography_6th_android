@@ -8,19 +8,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.gahee.myprography.ui.activities.DetailActivity
 import kotlinx.android.synthetic.main.view_holder_item.view.*
 
 class FilmsAdapter(
 ) :
     ListAdapter<Film, ListViewHolder>(FilmDiffUtilCallback()) {
 
-    private lateinit var context : Context
+    companion object {
+        const val FILM_DATA_KEY : String = "film_data_key"
+    }
 
-    var films =  listOf<Film>()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    private lateinit var context : Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         context = parent.context
@@ -29,22 +28,14 @@ class FilmsAdapter(
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        holder.bind(films[position])
+        holder.bind(getItem(position))
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra(FILM_DATA_KEY, films[position])
+            intent.putExtra(FILM_DATA_KEY, getItem(position))
             context.startActivity(intent)
         }
 
-    }
-
-    override fun getItemCount(): Int {
-        return films.size
-    }
-
-    companion object {
-        const val FILM_DATA_KEY : String = "film_data_key"
     }
 
 }

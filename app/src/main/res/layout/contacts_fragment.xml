@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ContactsFragment">
+    tools:context=".ui.fragments.ContactsFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -11,6 +11,6 @@
         android:gravity="center"
         android:textSize="@dimen/text_size_large"
         android:textColor="@android:color/holo_green_dark"
-        android:text="CONTACTS"/>
+        android:text="@string/contacts"/>
 
 </FrameLayout>

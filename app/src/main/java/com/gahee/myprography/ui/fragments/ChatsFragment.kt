@@ -1,4 +1,4 @@
-package com.gahee.myprography.fragments
+package com.gahee.myprography.ui.fragments
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -7,13 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.gahee.myprography.ChatsViewModel
+import com.gahee.myprography.viewmodels.ChatsViewModel
 import com.gahee.myprography.FilmsAdapter
 import com.gahee.myprography.R
+import com.gahee.myprography.viewmodels.NetworkState
 import kotlinx.android.synthetic.main.chats_fragment.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -42,18 +42,42 @@ class ChatsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ChatsViewModel::class.java)
 
-        CoroutineScope(Dispatchers.Main).launch {
-            viewModel.fetchFilmsData()
-        }
+        viewModel.fetchFilmsData()
 
         setUpRecyclerView()
 
+        observeViewModel()
+    }
+
+
+    private fun observeViewModel(){
+
         viewModel.filmsLiveData.observe(viewLifecycleOwner, Observer {
             Log.d(TAG, "Observed : $it")
-            filmsAdapter.films = it
+            //Using List Adapter's submitList method.
+            filmsAdapter.submitList(it)
         })
 
+        viewModel.networkState.observe(viewLifecycleOwner, Observer {
+            handleNetworkState(it)
+        })
+    }
 
+    private fun handleNetworkState(networkState: NetworkState){
+        when (networkState) {
+            NetworkState.ERROR -> {
+                Toast.makeText(context, "Network Error. Please try again.", Toast.LENGTH_LONG).show()
+                main_progress_bar.visibility = View.GONE
+
+            }
+            NetworkState.LOADING -> {
+                main_progress_bar.visibility = View.VISIBLE
+
+            }
+            NetworkState.DONE -> {
+                main_progress_bar.visibility = View.GONE
+            }
+        }
     }
 
     private fun setUpRecyclerView(){

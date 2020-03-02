@@ -3,4 +3,8 @@
     <dimen name="text_size_medium">24sp</dimen>
     <dimen name="text_size_small">16sp</dimen>
     <dimen name="text_size_large">48sp</dimen>
+
+    <dimen name="padding_1x">8dp</dimen>
+    <dimen name="padding_2x">16dp</dimen>
+    <dimen name="margin_1x">8dp</dimen>
 </resources>

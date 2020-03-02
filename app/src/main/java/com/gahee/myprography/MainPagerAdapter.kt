@@ -3,9 +3,9 @@ package com.gahee.myprography
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.gahee.myprography.fragments.CallsFragment
-import com.gahee.myprography.fragments.ChatsFragment
-import com.gahee.myprography.fragments.ContactsFragment
+import com.gahee.myprography.ui.fragments.CallsFragment
+import com.gahee.myprography.ui.fragments.ChatsFragment
+import com.gahee.myprography.ui.fragments.ContactsFragment
 
 class MainPagerAdapter(
     fragmentManager: FragmentManager,
