@@ -22,12 +22,15 @@
 
 ### Demonstration 
 
-* Bottom Navigation 
+* Bottom Navigation
+<br> 
 ![BottomNavigation](./demo_bottom_nav.gif)
 
-* Bottom Navigation View Hiding 
+* Bottom Navigation View Hiding
+<br> 
 ![Nav2](./demo_bottom_hide.gif)
 
 * Scrolling Detail Activity
+<br>
 ![Scroll](./demo_scroll.gif)
  
