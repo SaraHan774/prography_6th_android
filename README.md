@@ -21,9 +21,6 @@
 * SwipeRefreshLayout 으로 RecyclerView 를 감싸도록 하여 아래로 내리면 네트워크 요청을 다시 할 수 있도록 하였습니다.  
 
 
-### 설계 다이어그램
-![architecture](./architecture.png)
-
 ### Demonstration 
 
 #### Bottom Navigation
