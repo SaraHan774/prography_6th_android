@@ -24,13 +24,13 @@
 ### Demonstration 
 
 #### Bottom Navigation
-![BottomNavigation](./demo_swiping.gif)
+![BottomNavigation](./demos/demo_swiping.gif)
 
 #### Main - Detail Flow
-![main_detail](./demo_main_detail.gif)
+![main_detail](./demos/demo_main_detail.gif)
 
 #### Network Checking 
-![network_checking](./demo_networkchecking.gif)
+![network_checking](./demos/demo_networkchecking.gif)
 
 
  
