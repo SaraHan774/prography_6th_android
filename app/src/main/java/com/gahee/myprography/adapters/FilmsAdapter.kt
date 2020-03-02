@@ -59,5 +59,4 @@ class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         itemView.tv_main_film_release_date.text = item.releaseDate
     }
 
-
 }

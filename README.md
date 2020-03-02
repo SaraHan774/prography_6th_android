@@ -22,6 +22,7 @@
 
 
 ### Demonstration 
+* Emulation 환경 : Samsung Galaxy S10 (API 28), Pixel 3A (API 29)
 
 #### Bottom Navigation
 ![BottomNavigation](./demos/demo_swiping.gif)
