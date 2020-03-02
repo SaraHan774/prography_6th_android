@@ -6,9 +6,9 @@ import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.viewpager.widget.ViewPager
-import com.gahee.myprography.BottomNavState
-import com.gahee.myprography.BottomNavViewModel
-import com.gahee.myprography.MainPagerAdapter
+import com.gahee.myprography.utils.BottomNavState
+import com.gahee.myprography.utils.BottomNavViewModel
+import com.gahee.myprography.adapters.MainPagerAdapter
 import com.gahee.myprography.R
 import kotlinx.android.synthetic.main.activity_main.*
 

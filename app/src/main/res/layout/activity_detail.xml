@@ -3,7 +3,6 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@android:color/white"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
@@ -72,6 +71,7 @@
             android:gravity="center"
             android:textSize="@dimen/text_size_small"
             android:textStyle="bold"
+            android:text="@string/director"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="director"/>
@@ -82,6 +82,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_small"
+            android:text="@string/producer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="producer"/>
@@ -92,6 +93,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_small"
+            android:text="@string/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="release_date"/>

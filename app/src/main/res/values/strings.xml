@@ -11,4 +11,10 @@
     </string>
 
     <string name="film_score">%s / 100</string>
+
+    <string name="menu_refresh">REFRESH</string>
+    <string name="error_msg">Network Error. Please try again.</string>
+    <string name="director">DIRECTOR\n\n</string>
+    <string name="producer">PRODUCER\n\n</string>
+    <string name="year">YEAR\n\n</string>
 </resources>

@@ -1,5 +1,7 @@
 ### 프로그라피 사전 과제 (Android)
 
+![screenshots](./screenshots.png)
+
 #### MVVM, ViewModel, LiveData 
 * MVVM 아키텍처를 기반으로 설계하였습니다. 
 * Retrofit, Gson 을 이용해 JSON 객체를 읽어와 `Film` data class 객체로 변환하였습니다.
@@ -14,7 +16,9 @@
 
 #### etc. 
 * DetailActivity 에서 정보의 양이 스크린의 범위를 초과할 경우 텍스트가 잘리지 않도록 상위 레이아웃을 ScrollView 로 설정했습니다.
-* DetailActivity 에서 Home 으로 가는 Back 버튼을 ActionBar 에 추가하였습니다. 
+* DetailActivity 에서 Home 으로 가는 Back 버튼을 ActionBar 에 추가하였습니다.
+* Network 상태를 LOADING, DONE, ERROR 로 나누고 그에 따라 ProgressBar 상태를 변경하도록 하였습니다. 
+* SwipeRefreshLayout 으로 RecyclerView 를 감싸도록 하여 아래로 내리면 네트워크 요청을 하시 할 수 있도록 하였습니다.  
 
 
 ### 설계 다이어그램
@@ -23,11 +27,16 @@
 ### Demonstration 
 
 #### Bottom Navigation
-![BottomNavigation](./demo_bottom_nav.gif)
+![BottomNavigation](./demo_swiping.gif)
 
 #### Bottom Navigation View Hiding
 ![Nav2](./demo_bottom_hide.gif)
 
-#### Scrolling Detail Activity
-![Scroll](./demo_scroll.gif)
+#### Main - Detail Flow
+![main_detail](./demo_main_detail.gif)
+
+#### Network Checking 
+![network_checking](./demo_networkchecking.gif)
+
+
  

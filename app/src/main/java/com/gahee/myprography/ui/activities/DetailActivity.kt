@@ -2,8 +2,8 @@ package com.gahee.myprography.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.gahee.myprography.Film
-import com.gahee.myprography.FilmsAdapter.Companion.FILM_DATA_KEY
+import com.gahee.myprography.network.Film
+import com.gahee.myprography.adapters.FilmsAdapter.Companion.FILM_DATA_KEY
 import com.gahee.myprography.R
 import kotlinx.android.synthetic.main.activity_detail.*
 
@@ -18,10 +18,11 @@ class DetailActivity : AppCompatActivity() {
 
         tv_detail_film_title.text = film.title
         tv_detail_film_rate.text = film.rate
-        tv_detail_film_director.text = film.director
-        tv_detail_film_producer.text = film.producer
         tv_detail_film_description.text = film.description
-        tv_detail_film_release_date.text = film.releaseDate
+
+        tv_detail_film_director.append(film.director)
+        tv_detail_film_producer.append(film.producer)
+        tv_detail_film_release_date.append(film.releaseDate)
 
         //set up rating bar. 100점을 별 다섯 개로 표현하기 위해 20으로 나눈다.
         tv_detail_film_rate.text = getString(R.string.film_score, film.rate)
@@ -33,7 +34,6 @@ class DetailActivity : AppCompatActivity() {
             title = film.title
             setDisplayHomeAsUpEnabled(true)
         }
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

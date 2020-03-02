@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.MainActivity">
 
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/main_view_pager_container"
         android:layout_width="match_parent"
