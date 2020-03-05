@@ -28,7 +28,7 @@ class DetailActivity : AppCompatActivity() {
         tv_detail_film_rate.text = getString(R.string.film_score, film.rate)
         detail_rating_bar.rating = film.rate.toFloat()/20
 
-
+        //액션바에 해당 필름 제목을 디스플레이 한다.
         val actionBar = supportActionBar
         actionBar?.apply{
             title = film.title

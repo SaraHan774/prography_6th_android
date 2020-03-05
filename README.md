@@ -7,8 +7,12 @@
 * Retrofit, Gson 을 이용해 JSON 객체를 읽어와 `Film` data class 객체로 변환하였습니다.
 * MVVM 아키텍처에서 흔히 사용되는 Repository 레이어를 만들지 않은 이유는 Data source 가 하나 뿐이며, 
 받아온 정보를 처리하는 데 있어서 복잡한 비즈니스 로직이 없다고 판단했기 때문입니다.   
-* ViewModel 에서는 정보를 LiveData 로서 관리합니다. Configuration change 가 일어나도 새롭게 정보를 
-네트워크에서 읽어오지 않기 위해 ViewModel 과 LiveData 를 사용했습니다.
+* 데이터를 ViewModel과 LiveData를 이용해 관리합니다.
+
+#### ViewPager & FragmentStatePagerAdapter
+* 뷰 페이저와 하단의 Bottom Navigation View 가 서로 일치하며 변화할 수 있도록 
+하단의 버튼 상태에 따라 뷰 페이저가 올바른 위치로 이동하게끔 만들었습니다. 
+* 마찬가지로 뷰 페이저를 슬라이드 하면 그에 맞게 버튼 상태가 바뀌도록 하였습니다. 
 
 #### RecyclerView & ListAdapter
 * RecyclerView 에서 ListAdapter 와 DiffUtilCallback 을 사용해 리스트를 효율적으로 업데이트 하고자 했습니다. (비록 static 한 API 정보 인 것 같았지만)

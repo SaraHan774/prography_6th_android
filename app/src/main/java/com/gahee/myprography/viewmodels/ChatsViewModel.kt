@@ -45,8 +45,7 @@ class ChatsViewModel : ViewModel() {
         }
     }
 
-
-    //TODO : 데이터베이스 캐싱을 이용하는게 더 좋을 것 같다.
+    //만약 이미 가져온 정보가 있다면 해당 정보를 사용한다.
     fun fetchFilmsData(){
         if(_filmsLiveData.value.isNullOrEmpty()){
             uiScope.launch {
